@@ -5,7 +5,7 @@
 
 let eps = 0.001;
 
-function calc(a, b) {
+function cal(a, b) {
    let x = (a + b) / 2; //test
 
    let resA = calcExpression(a);
@@ -17,7 +17,7 @@ function calc(a, b) {
       a = x;
    }
    if (Math.abs(b - a) > eps * 2) {
-      x = calc(a, b);
+      x = cal(a, b);
    } else {
       x = (a + b) / 2;
       return x;
@@ -25,7 +25,7 @@ function calc(a, b) {
    return x;
 }
 
-let res = calc(0, 10);
+let res = cal(0, 10);
 console.log(res);
 
 function calcExpression(value) {
